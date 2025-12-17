@@ -34,13 +34,13 @@ const patchEmojisEveryWhere = () => {
     /** save function if doesnt exist */
     mod.sendMsg = mod.sendMsg ?? mod.sendMessage
 
-    mod.sendMessage = (channel_id,message_data) => {
+    mod.sendMessage = (channel_id,message_data,...args) => {
         if (message_data.content.startsWith("!!fn_ignore")){
-            mod.sendMsg(channel_id,message_data)
+            mod.sendMsg(channel_id,message_data,...args)
             return
         }
         message_data.content = Constants.CONVERT_TO_FAKE_EMOJIS(message_data.content)
-        mod.sendMsg(channel_id,message_data)
+        mod.sendMsg(channel_id,message_data,...args)
     }
 }
 export default patchEmojisEveryWhere
