@@ -1,5 +1,5 @@
 # PR Watcher Test
 
-This pull request is a harmless test for the local OpenCode review-comment watcher.
+This pull request verifies that the local OpenCode watcher detects new pull request comments and submitted reviews.
 
-Review comments on this pull request should resume the configured OpenCode session with a request to respond to the new feedback.
+When new feedback appears, the watcher resumes the configured OpenCode session and asks it to inspect, address, and respond to the comments on this pull request.
